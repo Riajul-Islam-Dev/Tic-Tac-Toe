@@ -1,7 +1,7 @@
 /* Light Mode Styles */
 body.light-mode {
   background-color: #fff;
-  color: #fff; /* Set text color to white in light mode */
+  color: #000; /* Set text color to black in light mode */
 }
 
 .container.bg-info {
@@ -13,14 +13,14 @@ body.light-mode {
 }
 
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #000; /* Set text color to black in the default body */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #fff; /* Set text color to white in the default body */
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
-  color: #fff; /* Set text color to white for container content */
+  color: #000; /* Set text color to black for container content */
 }
 
 h1 {
@@ -39,21 +39,22 @@ h1 {
 
 #board {
   display: grid;
-  grid-template-columns: repeat(3, 120px);
+  grid-template-columns: repeat(3, 1fr); /* Use fractions for grid layout */
   grid-gap: 10px;
   margin: 20px auto;
 }
 
 .cell {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 36px;
   background-color: #f0f0f0;
   cursor: pointer;
-  color: #fff; /* Set text color to white for cell content */
+  color: #000; /* Set text color to black for cell content */
+  overflow: hidden;
 }
 
 #message {
@@ -91,4 +92,31 @@ body.dark-mode {
   .custom-control-input:checked
   ~ .custom-control-label::before {
   background-color: #000; /* Background color for the "on" state */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .cell {
+    width: 70px; /* Adjust cell width for smaller screens */
+    height: 70px; /* Adjust cell height for smaller screens */
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  #message {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    height: 100vh; /* Set container height to cover the entire viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push content to the top and bottom */
+    border-radius: 0; /* Remove rounded corners */
+  }
+
+  /* Add other style adjustments for smaller screens */
 }
