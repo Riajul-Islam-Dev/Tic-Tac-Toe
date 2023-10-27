@@ -1,0 +1,94 @@
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #fff;
+  color: #fff; /* Set text color to white in light mode */
+}
+
+.container.bg-info {
+  background-color: #17a2b8;
+}
+
+.container.bg-secondary {
+  background-color: #6c757d;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #fff; /* Set text color to white in the default body */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  color: #fff; /* Set text color to white for container content */
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff; /* Set text color to white for h1 */
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  color: #fff; /* Set text color to white for cell content */
+}
+
+#message {
+  margin: 20px;
+  font-size: 18px;
+  color: #fff; /* Set text color to white for message content */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff; /* Set text color to white in dark mode */
+}
+
+.custom-switch .custom-control-label::before {
+  background-color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Customize the toggle switch background color for both "on" and "off" states */
+.custom-control.custom-switch .custom-control-label::before {
+  background-color: #fff; /* Background color for the "off" state */
+}
+
+.custom-control.custom-switch
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #000; /* Background color for the "on" state */
+}
